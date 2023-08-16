@@ -13,7 +13,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: "Portfolio",
+      title: "Frontend Developer | Sai Vikas",
       template: "./src/index.html",
       filename: "index.html",
       inject: false,
