@@ -8,55 +8,96 @@
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
+    <link
+      h
+      ref="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
     <title>Portfolio</title>
   </head>
 
+  <!-- Navbar -->
   <header>
     <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Resume</a></li>
-      <li><a href="#">Contact</a></li>
+      <li><a href="#main">Home</a></li>
+      <li><a href="#description">About</a></li>
+      <li><a href="#contact">Contact</a></li>
     </ul>
     <aside></aside>
   </header>
-  <main>
+  <!-- Main -->
+  <main id="main">
     <section class="intro">
       <div class="box">
-        <h1>I'M</h1>
-        <p>Web Designer, Frontend Developer</p>
+        <h1>I'M <span class="me"></span><span class="block">|</span></h1>
+        <p>Frontend Developer</p>
         <div class="social_media">
-          <i class="bx bx-sm bxl-github"></i>
-          <i class="bx bx-sm bxl-linkedin-square"></i>
+          <a href="https://github.com/vikas236" target="_blank"
+            ><i class="bx bx-sm bxl-github"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/in/sai-vikas-379a231a2"
+            target="_blank"
+          >
+            <i class="bx bx-sm bxl-linkedin-square"></i
+          ></a>
         </div>
       </div>
     </section>
-    <section class="description">
+    <!-- Description -->
+    <section id="description" class="description">
       <p>
         I'm am new at Frontend Development.I like developing web interfaces with
         clean & unique design.I don't care much about the income, as long as I
         am working on interesting new projects and earning some income that
-        prolong my livelihood.
+        prolongs my livelihood.
       </p>
-      <div class="skills"></div>
+      <div class="bottom">
+        <h2>MY SKILLS</h2>
+        <div class="skills">
+          <div class="skills_container"></div>
+        </div>
+      </div>
     </section>
-    <section class="projects"></section>
+    <section class="projects">
+      <h2>MY PROJECTS</h2>
+      <div class="projects_container"></div>
+    </section>
   </main>
+  <!-- Footer -->
   <footer>
-    <section class="contact">
-      <h3>GET IN TOUCH</h3>
-      <span>Yendada, Visakhapatnam</span>
-      <span>Andhra Pradesh, India</span>
-      <span>+91 6281491232</span>
-      <span>saivikas461@gmail.com</span>
-      <form action="POST">
-        <input type="text" placeholder="YOUR NAME" />
-        <input type="text" placeholder="YOUR EMAIL" />
-        <input type="text" placeholder="SUBJECT" />
-        <textarea name="message" id="message" cols="30" rows="10"></textarea>
-        <button type="submit">SEND MESSAGE</button>
-      </form>
+    <section id="contact" class="contact">
+      <div class="container">
+        <div class="left">
+          <h2>GET IN TOUCH</h2>
+          <span> India, </span>
+          <span> Andhra Pradesh</span>
+          <span> +91 6281491232</span>
+          <span>saivikas461@gmail.com </span>
+        </div>
+        <div class="right">
+          <form>
+            <input
+              id="name"
+              type="text"
+              placeholder="YOUR NAME"
+              minlength="2"
+            />
+            <input id="email" type="email" placeholder="YOUR EMAIL" />
+            <input id="subject" type="text" placeholder="SUBJECT" />
+            <textarea
+              name="message"
+              id="message"
+              cols="30"
+              rows="10"
+              placeholder="MESSAGE"
+            ></textarea>
+            <button id="submit_message" type="submit">SEND MESSAGE</button>
+          </form>
+        </div>
+      </div>
     </section>
+    <div class="copyright"></div>
   </footer>
   <script src="main.js"></script>
 </html>

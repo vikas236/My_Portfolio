@@ -1,9 +1,15 @@
+// Import javascript
+import description from "./javascript/description";
+import introduction from "./javascript/introduction";
+import message from "./javascript/sendMessage";
+import contact from "./javascript/contact";
+
 // Import css styling
 import "./css/styles.css";
 
-// Import Images
-import "./images/laptop.jpg";
-
-const intro = document.querySelector(".intro");
-// intro.style.background = "url('/dist/images/laptop.jpg')";
-intro.style.background = "grey";
+introduction.animateText();
+description.addSkills();
+description.addProjects();
+contact.addContainer();
+message.submitMessage();
+// description.moveSlider();

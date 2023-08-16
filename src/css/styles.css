@@ -1,46 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: sans-serif;
+  font-family: "Poppins", sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
+/* Navbar Styling */
 header {
   width: 100vw;
   height: 75px;
-  width: 70%;
   position: fixed;
   top: -75px;
   display: flex;
-  justify-content: end;
+  justify-content: center;
   align-items: center;
+  background: white;
+  transition: 0.2s ease-in;
+  box-shadow: 0 1px 10px -3px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+}
+
+header.active {
+  top: 0px;
 }
 
 header ul {
-  width: 500px;
+  width: 70%;
   list-style: none;
   display: flex;
-  justify-content: space-around;
+  justify-content: end;
   background: white;
 }
 
 header ul li {
   font-size: 16px;
+  padding-right: 50px;
+  font-weight: 700;
+}
+
+header ul li:last-of-type {
+  margin: 0;
 }
 
 header ul a {
   text-decoration: none;
   color: #999999;
+  transition: 0.2s;
+}
+
+header ul a:hover {
+  color: #b59d7c;
+}
+
+header ul a.active {
+  color: #b59d7c;
 }
 
 main {
   overflow: visible;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  align-items: center;
 }
 
 main .intro {
@@ -60,9 +89,10 @@ main .intro {
 }
 
 .intro h1 {
-  font-size: 38px;
+  font-size: 42px;
   margin: 0;
   margin-bottom: 5px;
+  font-weight: bold;
 }
 
 .intro p {
@@ -70,26 +100,294 @@ main .intro {
 }
 
 .intro .social_media {
-  margin-top: 10px;
+  margin-top: 15px;
 }
 
-.social_media i {
-  margin-left: 5px;
+.social_media a {
+  margin-right: 10px;
+  color: white;
 }
 
 .description {
-  height: 50vh;
+  height: 800px;
   background: #f7f7f7;
   margin: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
 }
 
 .description p {
-  width: 60%;
+  width: 70%;
   letter-spacing: 1px;
+  color: #999999;
+  margin-top: 150px;
+}
+
+.description h2 {
+  text-align: center;
+  font-weight: 500;
+  margin: 0;
   color: #999999;
 }
 
+/* Slider of skills here */
+.skills {
+  width: 70vw;
+  height: 300px;
+  overflow: hidden;
+  position: relative;
+  transition: 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.skills_container {
+  width: 1250px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+  left: 0px;
+  transition: 0.3s;
+}
+
+.skills .skill {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-self: center;
+  color: #999999;
+}
+
+.skills .skill_icon {
+  width: 150px;
+}
+
+.skills h3 {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+/* .skills i {
+  position: absolute;
+  color: grey;
+  padding: 100px;
+  transition: 0.3s;
+  border-radius: 50%;
+  top: 0px;
+}
+
+.skills i:hover {
+  color: white;
+  background: linear-gradient(90deg, transparent 45%, rgba(153, 153, 153, 0.7));
+}
+
+.skills .bxs-chevron-left {
+  left: -100px;
+  padding-right: 50px;
+}
+
+.skills .bxs-chevron-right {
+  right: -100px;
+  padding-left: 50px;
+}
+
+.skills .bxs-chevron-right:hover {
+  background: linear-gradient(
+    -90deg,
+    transparent 45%,
+    rgba(153, 153, 153, 0.7)
+  );
+} */
+
+/* Projects list */
+.projects {
+  width: 100vw;
+  height: 900px;
+  overflow: hidden;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.projects h2 {
+  text-align: center;
+  letter-spacing: 1px;
+  padding-top: 50px;
+  font-weight: 500;
+}
+
+.projects_container {
+  width: 70vw;
+  height: 550px;
+  overflow: hidden;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.projects .project {
+  width: 410px;
+  height: 231px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 10px -5px;
+  margin-left: 15px;
+  margin-top: 50px;
+  overflow: hidden;
+  position: relative;
+}
+
+.projects img {
+  width: 410px;
+  height: 231px;
+  transition: 0.3s;
+}
+
+.projects img:hover {
+  transform: scale(1.05);
+  cursor: default;
+}
+
+.project .project_label {
+  width: 330px;
+  height: 70px;
+  background: white;
+  position: absolute;
+  border-radius: 5px;
+  opacity: 0.96;
+  inset: 140px 15px;
+  transition: 0.4s;
+  z-index: 1;
+  box-shadow: 5px 5px 10px -10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 25px;
+  opacity: 0%;
+}
+
+.project_label:hover {
+  opacity: 100%;
+}
+
+.project_label h3 {
+  font-weight: 400;
+  color: #999999;
+  font-size: 16px;
+}
+
+.project_label i {
+  color: #999999;
+  margin-left: 10px;
+}
+
+.project_label i:hover {
+  color: #b59d7c;
+}
+
+/* Get in touch */
+section.contact {
+  width: 100vw;
+  height: 650px;
+  background: #f7f7f7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.contact h2 {
+  font-size: 32px;
+}
+
+.contact .container {
+  width: 65vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contact .left {
+  position: relative;
+  bottom: 125px;
+}
+
+.contact .right {
+  width: 50%;
+  padding: 25px;
+  position: relative;
+  left: 35px;
+}
+
+.contact span {
+  width: 225px;
+  color: #999999;
+  display: block;
+}
+
+.contact input {
+  width: 95%;
+  border-radius: 0;
+  border: 1px solid black;
+  padding: 10px;
+  margin: 7px 0;
+}
+
+.contact .message_box {
+  position: relative;
+}
+
+.contact .message_box.invalid::before {
+  content: "*";
+  font-size: 22px;
+  color: red;
+  position: absolute;
+  left: -20px;
+  top: 10px;
+  display: inline-block;
+}
+
+.contact input:focus,
+.contact textarea:focus {
+  border: 1px solid cornflowerblue;
+  outline: none;
+}
+
+.contact textarea {
+  width: 95%;
+  padding: 10px;
+  margin: 7px 0;
+  border: 1px solid black;
+}
+
+.contact input::placeholder,
+.contact textarea::placeholder {
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+.contact button {
+  width: calc(100% - 8px);
+  padding: 10px;
+  margin: 7px 0;
+  background: black;
+  border: 1px solid black;
+  color: white;
+  font-size: 14px;
+}
+
+.contact button:hover {
+  color: black;
+  background: white;
+  cursor: pointer;
+}
+
+.copyright {
+  width: 100vw;
+  height: 150px;
+}
