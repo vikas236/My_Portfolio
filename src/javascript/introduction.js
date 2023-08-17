@@ -6,7 +6,7 @@ const intro = document.querySelector(".intro");
 const navbar = document.querySelector("header");
 const anchors = document.querySelectorAll("a");
 const me = document.querySelector(".me");
-const block = document.querySelector(".block"); // blinking cursor in intro
+const block = document.querySelector(".block"); // cursor after name
 
 intro.style.background = "url('images/calm_image.png')";
 
