@@ -8,7 +8,7 @@ const anchors = document.querySelectorAll("a");
 const me = document.querySelector(".me");
 const block = document.querySelector(".block"); // blinking cursor in intro
 
-intro.style.background = "url('/dist/images/calm_image.png')";
+intro.style.background = "url('images/calm_image.png')";
 
 const e = (() => {
   let previousPos = window.scrollY;
