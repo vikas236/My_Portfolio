@@ -55,7 +55,7 @@ const e = (() => {
       const skill = document.createElement("div");
       skill.classList.add(`skill`);
       const icon = document.createElement("img");
-      icon.src = `images/${skillIcons[i]}`;
+      icon.src = `/images/${skillIcons[i]}`;
       icon.classList.add("skill_icon");
       const label = document.createElement("h3");
       label.textContent = `${skillIcons[i].slice(0, -4)}`;
@@ -108,7 +108,7 @@ const e = (() => {
       anchor.href = `https://vikas236.github.io/${projectLinks[i]}`;
       anchor.target = "_blank";
       project.classList.add("project");
-      image.src = `images/${projectIcons[i]}`;
+      image.src = `/images/${projectIcons[i]}`;
       projectsBox.appendChild(project);
       projectsBox.childNodes[i].appendChild(anchor);
       e.addProjectLabels(i);
