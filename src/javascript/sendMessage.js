@@ -1,4 +1,4 @@
-const form = document.querySelector("form");
+const form = document.querySelector(".form");
 const input = form.childNodes;
 const values = [];
 
@@ -51,7 +51,7 @@ const e = (() => {
     }
 
     if (valid === false) {
-      return false;
+      return valid;
     }
     return true;
   };

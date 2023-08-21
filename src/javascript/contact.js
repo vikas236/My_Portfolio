@@ -1,5 +1,6 @@
-const form = document.querySelector("form");
-// const input = document.querySelectorAll("input");
+const copyright = document.querySelector(".copyright");
+const intro = document.querySelector(".intro");
+const form = document.querySelector(".form");
 
 const e = (() => {
   const addContainer = () => {
@@ -12,10 +13,17 @@ const e = (() => {
     }
     data.appendChild(form.childNodes[5]);
     form.innerHTML = data.innerHTML;
+    e.addMedia();
+  };
+
+  const addMedia = () => {
+    const code = intro.childNodes[1].childNodes[5];
+    copyright.innerHTML = code.innerHTML;
   };
 
   return {
     addContainer,
+    addMedia,
   };
 })();
 

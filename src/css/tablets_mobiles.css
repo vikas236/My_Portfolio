@@ -1,0 +1,131 @@
+/* Styles for mobile devices */
+@media screen and (max-width: 767px) {
+}
+
+/* Styles for tablets and smaller laptops */
+@media screen and (min-width: 768px) and (max-width: 1080px) {
+  .intro {
+    height: 575px !important;
+    overflow: hidden;
+  }
+
+  .intro .box {
+    left: 0px;
+  }
+
+  .intro h1 {
+    font-size: 32px;
+  }
+
+  .intro p {
+    font-size: 14px;
+  }
+
+  .description p {
+    font-size: 15px;
+    text-align: center;
+    margin-top: 75px;
+  }
+
+  .description h2 {
+    font-size: 22px;
+  }
+
+  .skills_container {
+    width: 100%;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 125px;
+    row-gap: 5px;
+    margin-top: 100px;
+  }
+
+  .skills .skill_icon {
+    width: 75px;
+  }
+
+  .projects {
+    height: 800px;
+  }
+
+  .projects_container {
+    width: 90vw;
+    height: 650px;
+    margin-top: 25px;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 25px;
+    column-gap: 25px;
+  }
+
+  .projects .project {
+    width: 350px;
+    height: 197px;
+    margin: 0;
+  }
+
+  .project img {
+    width: 350px;
+    height: 197px;
+  }
+
+  .project .project_label {
+    width: 77%;
+    height: 55px;
+    opacity: 93%;
+    position: relative;
+    top: -75px;
+  }
+
+  section.contact {
+    height: 600px;
+  }
+
+  .contact .container {
+    flex-direction: column;
+    height: 500px;
+  }
+
+  .contact .left {
+    bottom: 0px;
+    width: 350px;
+    text-align: center;
+  }
+
+  .contact h2 {
+    margin: 0;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  .contact span {
+    width: fit-content;
+    display: inline;
+  }
+
+  .contact .right {
+    position: static;
+    width: 400px;
+  }
+
+  .contact input {
+    width: 100%;
+    height: 10px;
+  }
+
+  .contact textarea {
+    width: 100%;
+    height: 100px;
+  }
+
+  .contact button {
+    width: 106%;
+  }
+
+  .copyright {
+    height: 75px;
+  }
+}

@@ -1,5 +1,7 @@
 // Import Images
 import "../images/calm_image.png";
+import "../images/calm_image_md.jpg";
+import "../images/calm_image_sm.jpg";
 
 // Import html Elements
 const intro = document.querySelector(".intro");
@@ -90,7 +92,18 @@ const e = (() => {
     }
   };
 
-  return { animateText, blinkOnce };
+  // Check the current screen size and apply appropriate styles
+  function checkScreenSize() {
+    if (window.matchMedia("(max-width: 767px)").matches) {
+      intro.style.background = "url('images/calm_image_sm.jpg') no-repeat";
+    } else if (window.matchMedia("(max-width: 1023px)").matches) {
+      intro.style.background = "url('images/calm_image_md.jpg') no-repeat";
+    } else {
+      intro.style.background = "url('images/calm_image.png')";
+    }
+  }
+
+  return { animateText, blinkOnce, checkScreenSize };
 })();
 
 export default e;
