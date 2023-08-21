@@ -42,7 +42,7 @@ const projectLinks = [
 const projectNames = [
   "Landing Page",
   "Etch a Sketch",
-  "Dashboard using Grid",
+  "Dashboard (grid)",
   "Calculator",
   "Form Page",
   "My Library",
@@ -113,7 +113,7 @@ const e = (() => {
       projectsBox.childNodes[i].appendChild(anchor);
       e.addProjectLabels(i);
     }
-    e.showLabel();
+    if (window.innerWidth > 1440) e.showLabel();
   };
 
   // Add labels to the projects
